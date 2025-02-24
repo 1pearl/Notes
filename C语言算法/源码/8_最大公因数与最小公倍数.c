@@ -11,13 +11,12 @@ int main(){
 	int num1,num2,temp,cal,rem;
 	printf("请输入两个数字\n");
 	scanf("%d%d",&num1,&num2);
-	if(num1 > num2){
-		temp = num1;
-		num1 = num2;
-		num2 = temp;
+	if(num1 <= 0 || num2 <= 0){
+		printf("输入的数字必须为正整数！");
+		return 1; 
 	}
 	cal = num1*num2;
-	while(num2 != 0) {
+	while(num2 != 0) {//欧几里得算法 
 		rem = num1%num2;
 		num1 = num2;
 		num2 = rem;

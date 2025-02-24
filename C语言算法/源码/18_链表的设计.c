@@ -26,7 +26,7 @@ int myLinkedListGet(MyLinkedList* obj, int index) {
 	if(index < 0 || index >= obj->size){
 		return -1;
 	}
-	ListNode cur = obj->head;
+	ListNode* cur = obj->head;
 	int i;
 	for(i = 0;i < index; i++){
 		cur = cur->next;
@@ -62,7 +62,7 @@ void myLinkedListAddAtTail(MyLinkedList* obj, int val) {
 }
 
 void myLinkedListAddAtIndex(MyLinkedList* obj, int index, int val) {
-    
+     
 }
 
 void myLinkedListDeleteAtIndex(MyLinkedList* obj, int index) {
@@ -73,7 +73,7 @@ void myLinkedListFree(MyLinkedList* obj) {
     
 }
 
-int main(){
+int main() {
 	
 	return 0;
 }

@@ -49,11 +49,11 @@ void GradeDistribution(Student *student, int n) {
 	for(i=0;i<n;i++){
 		if(student[i].Average<60){
 			grade[0]++;
-		} else if(student[i].Average>=60&&student[i].Average<=70){
+		} else if(student[i].Average>=60&&student[i].Average<70){
 			grade[1]++;
-		} else if(student[i].Average>=70&&student[i].Average<=80){
+		} else if(student[i].Average>=70&&student[i].Average<80){
 			grade[2]++;
-		} else if(student[i].Average>=80&&student[i].Average<=90){
+		} else if(student[i].Average>=80&&student[i].Average<90){
 			grade[3]++;
 		} else {
 			grade[4]++;

@@ -9,8 +9,7 @@ int main(){
 		printf("Êý×Ö\n"); 
 	} else if(c>='a'&&c<='z') {
 		printf("Ð¡Ð´×ÖÄ¸\n");
-	} else if(c>='A'&&c<='Z') {
-		printf("´óÐ´×ÖÄ¸\n");
+ 		printf("´óÐ´×ÖÄ¸\n");
 	} else {
 		printf("ÆäËû\n");
 	}
