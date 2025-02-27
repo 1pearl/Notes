@@ -109,3 +109,4 @@ int main(){
 	printf("%.6f",secantMethod(f,a,b,tol,iter));
 	return 0;
 } 
+

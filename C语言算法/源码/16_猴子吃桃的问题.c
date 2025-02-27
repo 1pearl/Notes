@@ -39,3 +39,4 @@ int main() {
     printf("第1天摘了%d个桃子\n",sum_2(n));
 	return 0;
 } 
+
