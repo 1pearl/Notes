@@ -1,11 +1,11 @@
 #include "stdio.h"
 #include "stdlib.h"
 
-//1.冒泡排序 ,人的悲欢并不相通 
-void bubblesort(int *arr,int len){
+////1.冒泡排序 ,人的悲欢并不相通 
+void bubbleSort(int *arr,int len){
 	int i,j,temp;
-	for(i=0;i<len;i++){
-		for(j=0;j<len-i-1;j++){
+	for(i=0;i<len-1;i++){//控制排序的轮数 
+		for(j=0;j<len-i-1;j++){//控制相邻的元素比较，将较大的元素，存入数组最后 
 			if(arr[j]>arr[j+1]){
 				temp = arr[j];
 				arr[j] = arr[j+1];
@@ -14,6 +14,19 @@ void bubblesort(int *arr,int len){
 		}
 	}
 }
+
+//void bubbleSort(int* a, int n) {
+//    int i, j, temp;
+//    for (i = 0; i < n - 1; i++) { // 外层循环控制排序轮数
+//        for (j = 0; j < n - 1 - i; j++) { // 内层循环控制每轮比较次数
+//            if (a[j] > a[j + 1]) { // 比较相邻元素
+//                temp = a[j];
+//                a[j] = a[j + 1];
+//                a[j + 1] = temp;
+//            }
+//        }
+//    }
+//}
 
 //2.选择排序:https://www.bilibili.com/video/BV1mmrUY8Evu/?spm_id_from=333.337.search-card.all.click&vd_source=4d8bdaa129d34a4905c8db625c08e44d 
 void SelectionSort(int* arr,int len) {
@@ -215,13 +228,13 @@ int main(){
 	for(i=0;i<j;i++){
 		scanf("%d",p+i);
 	}
-//    bubblesort(p,j);
+    bubbleSort(p,j);
 //    SelectionSort(p,j);
 //    InsertionSort(p,j);
 //    QuickSort(p,0,j-1);
 //    ShellSort(p,j);
 //    HeapSort(p,j);
-      MergeSort(p,j);
+//    MergeSort(p,j);
     for(i=0;i<j;i++){
     	printf("%d ",*(p+i));
 	}
