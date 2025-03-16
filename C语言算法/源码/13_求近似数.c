@@ -74,8 +74,8 @@ double bisectionMethod(double (*f)(double), double a, double b, double tol, int 
 //弦截法
 /*
 f:函数
-x0:初试猜测值
-x1:初试猜测值
+x0:初始猜测值
+x1:初始猜测值
 tol:误差
 max_iter:迭代次数 
 */

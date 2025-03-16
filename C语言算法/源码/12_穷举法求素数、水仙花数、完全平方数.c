@@ -36,7 +36,7 @@ int isNarc(int num) {
 
 int isSquare(int num) {
 	int i;
-	for(i=1;i<num;i++){
+	for(i=1;i<=num;i++){
 		if(i * i == num) return 1;
 	}
 	return 0;

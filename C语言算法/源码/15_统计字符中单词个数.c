@@ -3,7 +3,7 @@
 #include <ctype.h> 
 
 int main(){
-	char str[1000];
+//	char str[1000];
 	char ch;
 	int word=0,count=0;
 //输入字符串可以输入空格的方法1，2	
