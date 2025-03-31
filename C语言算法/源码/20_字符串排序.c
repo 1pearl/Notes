@@ -9,7 +9,7 @@ void sort(char* name[],int n){
 	for(i=0;i<n-1;i++){//n个字符串只需要n-1次比较即可 
 		k=i;//假设第一个字符串最小，存入k 
 		for(j=i+1;j<n;j++){
-			if(strcmp(name[i],name[j])<0){
+			if(strcmp(name[i],name[j])<0){//返回值小于0，说明 str1 < str2 
 				k = j;//说明name[i]<name[j]，将较大元素的下标存入k 
 			} 
 		}

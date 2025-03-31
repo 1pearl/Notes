@@ -40,12 +40,36 @@ double newtonMethod(double (*f)(double), double (*df)(double), double x0, int ma
     for(i=0;i<max_iter;i++){
     	double fx = f(x);
     	double dfx = df(x);
-    	if(fabs(fx) < tol){ // 判断当前解是否足够精确
-    		return x; // 如果误差足够小，返回当前解
+    	double x_new = x - fx/dfx;
+    	if(fabs(x_new-x)<tol && fabs(fx) < tol){ // 判断当前解是否足够精确
+    		return x_new; // 如果误差足够小，返回当前解
 		}
-		x = x - fx/dfx;  
+		x = x_new;  
 	}
+	printf("达到最大收敛次数，可能未收敛\n"); 
 	return x;
+}
+
+double newtonMethod(double (*f)(double), double (*df)(double), double x0, int max_iter, double tol) {
+    double x_new;
+    for (int i = 0; i < max_iter; i++) {
+        double fx = f(x0);
+        double dfx = df(x0);
+
+        if (fabs(fx) < tol) {  // 函数值足够小，认为收敛
+            return x0;
+        }
+
+        x_new = x0 - fx / dfx;
+
+        if (fabs(x_new - x0) < tol) {  // 变量变化量足够小，认为收敛
+            return x_new;
+        }
+
+        x0 = x_new;
+    }
+    printf("达到最大收敛次数，可能未收敛\n");
+    return x0;
 }
 //二分法
 /*

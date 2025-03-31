@@ -12,7 +12,7 @@ int main(){
 	printf("请输入两个数字\n");
 	scanf("%d%d",&num1,&num2);
 	if(num1 <= 0 || num2 <= 0){
-		printf("输入的数字必须为正整数！");
+		printf("输入的数字必须为正整数！\n");
 		return 1; 
 	}
 	cal = num1*num2;
@@ -21,6 +21,6 @@ int main(){
 		num1 = num2;
 		num2 = rem;
 	}
-	printf("最大公因数是%d,最小公倍数是%d",num1,cal/num1); 
+	printf("最大公因数是%d,最小公倍数是%d!\n",num1,cal/num1); 
 	return 0;
 } 

@@ -10,12 +10,13 @@
 //	return 0;
 //}
 
-int isOdd(int n){
+int isPrime(int n){
 	int i;
 	if(n<2) return 0;//负数、0、1不是素数 
 	if(n==2) return 1;//2是素数 
 	if(n%2==0) return 0;//偶数不是素数 
 	for(i=3;i<=sqrt(n);i++){//在0~sqrt(n)之间可以被整除的不是素数 
+	    printf("i = %d\n",i);
 		if(n%i==0) return 0;
 	}
 	return 1;
@@ -29,12 +30,15 @@ int main(){
 		return; 
 	 } 
 	 for(i=2;i<=n/2;i++){
-	 	if(isOdd(i)&&isOdd(n-i)){
+	 	if(isPrime(i)&&isPrime(n-i)){
 	 		printf("%d=%d+%d\n",n,i,n-i);
 	 		return;
 		 }
 	 }
-	printf("未找到满足条件的素数对\n");
+//	printf("未找到满足条件的素数对\n");
+//    if(isPrime(n)){
+//    	printf("%d是素数！\n",n);
+//	}
 	
 //    for(num1=2;num1<n;num1++){
 //    	for(i=2;i<=sqrt(num1);i++)

@@ -5,14 +5,14 @@
 int main(){
 //	char str[1000];
 	char ch;
-	int word=0,count=0;
+	int flag=0,count=0;
 //输入字符串可以输入空格的方法1，2	
 //	scanf("%[^\n]",&str);
 	while((ch = getchar()) != '\n'&& ch != EOF){
 		if(ch == ' '){
-			word = 0;
-		} else if(word == 0){
-			word = 1;
+			flag = 0;
+		} else if(flag == 0){
+			flag = 1;
 			count++;
 		}
 	}
@@ -20,3 +20,17 @@ int main(){
 	
 	return 0;
 } 
+
+//int main(){
+//	char str[100]={0};
+//	fgets(str,sizeof(str),stdin);
+//	int i,count=0;
+//	for(i=0;str[i]!='\0';i++){
+//		if(isalpha(str[i])&&!isalpha(str[i+1])){
+//			count++;
+//		}
+//	}
+//	printf("%s中有%d个单词\n",str,count);
+//	return 0;
+//}
+

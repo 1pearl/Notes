@@ -453,7 +453,7 @@ git checkout -b 分支名 分支编号 #如：git checkout -b dev 244d35
 git init #初始化仓库
 git add .
 git commit -m "注释" #预提交
-git git remote add origin git@github.com:1pearl/Notes.git #关联远程与本地仓库
+gigit remote add origin git@github.com:1pearl/Notes.git #关联远程与本地仓库
 git branch -M main #命名分支
 git push -u origin main #提交到远程仓库
 ```
