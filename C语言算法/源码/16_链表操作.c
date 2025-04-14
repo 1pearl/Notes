@@ -50,6 +50,6 @@ int main(){
 		free(current);
 		current = next;
 	} 
-	
+	 
 	return 0;
 } 
